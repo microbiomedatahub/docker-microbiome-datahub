@@ -5,7 +5,7 @@ volumes:
 services:
   datahub:
     container_name: microbiome-datahub-stage
-    image: node:18
+    image: node:22
     volumes:
       - ./microbiome-datahub:/microbiome-datahub-stage
     command: bin/sh -c "cd /microbiome-datahub-stage && npm ci && npm run build"
